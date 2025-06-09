@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Coffee</title>
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS File Link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="index.html" class="logo">coffee <i class="fas fa-mug-hot"></i></a>
+        <nav class="navbar">
+            <a href="index.html#home">home</a>
+            <a href="index.html#about">about</a>
+            <a href="index.html#menu">menu</a>
+            <a href="index.html#review">review</a>
+            <a href="index.html#book">book</a>
+        </nav>
+        <div class="cart-icon" onclick="window.location.href='cart.html'">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+        </div>
+        <a href="index.html#book" class="btn">book a table</a>
+    </header>
+
+    <!-- CART SECTION -->
+    <section class="cart" id="cart">
+        <h1 class="heading">your cart <span>selected items</span></h1>
+        <div class="cart-container">
+            <!-- INVOICE FORM -->
+            <form id="invoice-form" class="invoice-form">
+                <h2>Generate Invoice</h2>
+                <div id="invoice-details">
+                    <p><strong>Order ID:</strong> <span id="invoice-order-id"></span></p>
+                    <p><strong>Date:</strong> <span id="invoice-date"></span></p>
+                    <p><strong>Customer:</strong> <input type="text" id="customer-name" placeholder="Enter your name" class="box" required></p>
+                    <table id="invoice-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="invoice-items"></tbody>
+                    </table>
+                    <p><strong>Total Amount:</strong> $<span id="invoice-total"></span></p>
+                    <div id="qrcode"></div>
+                    <div class="invoice-buttons">
+                        <button type="submit" class="btn">Generate Invoice</button>
+                        <a href="#" class="btn" id="download-invoice-btn">Download Invoice</a>
+                    </div>
+                </div>
+            </form>
+            <!-- CART TABLE -->
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items"></tbody>
+            </table>
+            <div class="cart-total">
+                <h3>Total: $<span id="cart-total-price">0.00</span></h3>
+                <a href="#" class="btn" id="checkout-btn">Checkout</a>
+                <a href="#" class="btn" id="clear-cart-btn">Clear Cart</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>our branches</h3>
+                <a href="#"><i class="fas fa-arrow-right"></i> india</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> USA</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> france</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> africa</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> japan</a>
+            </div>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="index.html#home"><i class="fas fa-arrow-right"></i> home</a>
+                <a href="index.html#about"><i class="fas fa-arrow-right"></i> about</a>
+                <a href="index.html#menu"><i class="fas fa-arrow-right"></i> menu</a>
+                <a href="index.html#review"><i class="fas fa-arrow-right"></i> review</a>
+                <a href="index.html#book"><i class="fas fa-arrow-right"></i> book</a>
+            </div>
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"><i class="fas fa-phone"></i> +123-456-7890</a>
+                <a href="#"><i class="fas fa-phone"></i> +111-222-3333</a>
+                <a href="#"><i class="fas fa-envelope"></i> coffee@gmail.com</a>
+                <a href="#"><i class="fas fa-envelope"></i> Perú, Lima</a>
+            </div>
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i> facebook</a>
+                <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+                <a href="#"><i class="fab fa-instagram"></i> instagram</a>
+                <a href="#"><i class="fab fa-linkedin"></i> linkedin</a>
+                <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+            </div>
+        </div>
+        <div class="credit">created by <span>mr. web designer</span> | all rights reserved</div>
+    </section>
+
+    <!-- QR Code Library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+    <!-- Custom JS File Link -->
+    <script src="js/cart.js"></script>
+</body>
+</html>
