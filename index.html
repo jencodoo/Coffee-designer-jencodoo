@@ -218,12 +218,16 @@
     <!-- BOOK -->
     <section class="book" id="book">
         <h1 class="heading">booking <span>reserve a table</span></h1>
-        <form action="">
-            <input type="text" placeholder="Name" class="box">
-            <input type="email" placeholder="Email" class="box">
-            <input type="number" placeholder="Number" class="box">
-            <textarea name="" placeholder="Message" class="box" id="" cols="30" rows="10"></textarea>
-            <input type="submit" value="send message" class="btn">
+        <form action="https://formspree.io/f/mwpbllgd" method="POST">
+            <label>
+                Your email:
+                <input type="email" name="email">
+            </label>
+            <label>
+                Your message:
+                <textarea name="message"></textarea>
+            </label>
+            <button type="submit">Send</button>
         </form>
     </section>
 
@@ -240,7 +244,7 @@
             </div>
             <div class="box">
                 <h3>quick links</h3>
-                <a href="#home"><i class="fas fa-arrow-right"></i> home1</a>
+                <a href="#home"><i class="fas fa-arrow-right"></i> home</a>
                 <a href="#about"><i class="fas fa-arrow-right"></i> about</a>
                 <a href="#menu"><i class="fas fa-arrow-right"></i> menu</a>
                 <a href="#review"><i class="fas fa-arrow-right"></i> review</a>
